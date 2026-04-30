@@ -102,6 +102,27 @@ This repo ships **prompts**, not code. Typical wiring:
 
 The prompts contain a Go-template placeholder `{{.CurrentDate}}` that the host should substitute before sending.
 
+## Install
+
+Via [skills.sh](https://skills.sh) (works for Claude Code / Cursor / Codex / CodeBuddy / OpenCode and 50+ agents):
+
+```bash
+# global install (available across all projects)
+npx skills add dimayip/research-agent -g -a claude-code
+
+# project-only install (committed with your project)
+npx skills add dimayip/research-agent -a codebuddy
+
+# list what ships in the repo without installing
+npx skills add dimayip/research-agent --list
+```
+
+Or install manually: clone/drop the repo into your agent's skills directory —
+e.g. `~/.claude/skills/research-agent/` or `.codebuddy/skills/research-agent/` —
+and the host picks it up on next launch.
+
+Compatible with the [Agent Skills Specification](https://agentskills.io).
+
 ## Repository layout
 
 ```

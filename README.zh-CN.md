@@ -102,6 +102,27 @@ research-<topic>/report.md（+ 附属资源）
 
 提示词中含有 Go 模板占位符 `{{.CurrentDate}}`，宿主需在发送前替换为实际日期。
 
+## 安装
+
+通过 [skills.sh](https://skills.sh) 安装（支持 Claude Code / Cursor / Codex / CodeBuddy / OpenCode 等 50+ agent）：
+
+```bash
+# 全局安装（所有项目可用）
+npx skills add dimayip/research-agent -g -a claude-code
+
+# 项目级安装（随项目提交，团队共享）
+npx skills add dimayip/research-agent -a codebuddy
+
+# 只看仓库里有哪些 skill，不安装
+npx skills add dimayip/research-agent --list
+```
+
+或手动安装：把整个仓库 clone/放到 agent 的 skills 目录下 ——
+例如 `~/.claude/skills/research-agent/` 或 `.codebuddy/skills/research-agent/` ——
+宿主下次启动时会自动识别。
+
+兼容 [Agent Skills Specification](https://agentskills.io)。
+
 ## 仓库结构
 
 ```
